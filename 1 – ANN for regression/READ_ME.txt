@@ -1,5 +1,9 @@
 Hello!
 
-First of all, I cleaned data and developed a neural network in the "ANN for regression" file.
-Secondly, I tried the classic ML algorythm with the same dataset to see whether the Linear regression works better in this case in the "Linear regression" file.
-Thirdly, I created the Optimizations files, which have different endings depending on the used methods, to experiment with different possible modifications for the neural network to see if I can get better results.
+First of all, I cleaned the data and developed a neural network in the “ANN for regression” file.
+
+Secondly, I tried a classic ML algorithm with the same dataset in the “Linear regression” file to see whether linear regression works better in this case.
+
+Thirdly, I created the “Optimizations” files (1-4), which have different endings depending on the methods used, to experiment with various possible modifications to the neural network to see if I could achieve better results.
+
+Finally, just for experimentation, I tried logistic regression to see if I could obtain better results.
