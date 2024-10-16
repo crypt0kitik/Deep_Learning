@@ -16,3 +16,8 @@ Neural network 1: Original :)
 Neural network 2: Changed loss='mse' to loss='categorical_crossentropy' and added metrics=['accuracy']
 Neural network 3: Experimented with layers
 Neural network 4: Added early stopping
+
+
+In your dataset, the target variable appears to be HeartDisease, 
+which likely indicates whether a patient has heart disease (Yes or No). 
+This suggests a binary classification problem.
