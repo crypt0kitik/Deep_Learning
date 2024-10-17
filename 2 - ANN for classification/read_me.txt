@@ -17,7 +17,17 @@ Neural network 2: Changed loss='mse' to loss='categorical_crossentropy' and adde
 Neural network 3: Experimented with layers
 Neural network 4: Added early stopping
 
-
-In your dataset, the target variable appears to be HeartDisease, 
+Talking about neural networks,
+In the dataset, the target variable appears to be HeartDisease, 
 which likely indicates whether a patient has heart disease (Yes or No). 
-This suggests a binary classification problem.
+This suggests a binary classification problem that is why I have only 1 output layer in all networks
+
+Comparison of neural networks
+
+| Model               | Test Loss | Test Accuracy | Train Loss | Train Accuracy |   MAE |   MSE |   RMSE |   R-squared |   Explained Variance Score |
+|---------------------|-----------|---------------|------------|----------------|-------|-------|--------|-------------|-----------------------------|
+| Neural Network 1    |           | ...           | ...        | ...            | ...   | ...   | ...    | ...         | ...                         |
+| Neural Network 2    | ...       | ...           | ...        | ...            | ...   | ...   | ...    | ...         | ...                         |
+| Neural Network 3    | ...       | ...           | ...        | ...            | ...   | ...   | ...    | ...         | ...                         |
+| Neural Network 4    | ...       | ...           | ...        | ...            | ...   | ...   | ...    | ...         | ...                         |
+| Logistic regression | ...       | ...           | ...        | ...            | ...   | ...   | ...    | ...         | ...                         |
