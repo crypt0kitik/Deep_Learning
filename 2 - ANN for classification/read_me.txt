@@ -24,10 +24,10 @@ This suggests a binary classification problem that is why I have only 1 output l
 
 Comparison of neural networks
 
-| Model               | Test Loss | Test Accuracy | Train Loss | Train Accuracy |   MAE |   MSE |   RMSE |   R-squared |   Explained Variance Score |
-|---------------------|-----------|---------------|------------|----------------|-------|-------|--------|-------------|-----------------------------|
-| Neural Network 1    |           | ...           | ...        | ...            | ...   | ...   | ...    | ...         | ...                         |
-| Neural Network 2    | ...       | ...           | ...        | ...            | ...   | ...   | ...    | ...         | ...                         |
-| Neural Network 3    | ...       | ...           | ...        | ...            | ...   | ...   | ...    | ...         | ...                         |
-| Neural Network 4    | ...       | ...           | ...        | ...            | ...   | ...   | ...    | ...         | ...                         |
-| Logistic regression | ...       | ...           | ...        | ...            | ...   | ...   | ...    | ...         | ...                         |
+| Model               | confusion_matrix | accuracy_score | roc_auc_score | 
+|---------------------|------------------|----------------|---------------|
+| Neural Network 1    |                  | ...           | ...        |
+| Neural Network 2    | ...              | ...           | ...        |
+| Neural Network 3    | ...              | ...           | ...        |
+| Neural Network 4    | ...              | ...           | ...        |
+| Logistic regression | ...              | ...           | ...        |
