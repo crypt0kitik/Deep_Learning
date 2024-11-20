@@ -12,8 +12,8 @@ I created 4 different neural networks, changing something in each one.
 I created a logistic regression model to compare results and understand what worked better in this case: traditional machine learning or the neural networks I implemented.
 Below you can find the changes I made when implementing the neural networks:
 
-Neural network 1: Original :)
-Neural network 2: Changed loss='mse' to loss='categorical_crossentropy' and added metrics=['accuracy']
+Neural network 1: the binary network instead of categorical one
+Neural network 2: the categorical network
 Neural network 3: Experimented with layers
 Neural network 4: Added early stopping
 
@@ -26,8 +26,8 @@ Comparison of neural networks
 
 | Model               | confusion_matrix | accuracy_score | roc_auc_score | 
 |---------------------|------------------|----------------|---------------|
-| Neural Network 1    |                  | ...           | ...        |
-| Neural Network 2    | ...              | ...           | ...        |
+| Neural Network 1    |                  | 92.58%         | 0.82          |
+| Neural Network 2    | ...              | ...            | ...        |
 | Neural Network 3    | ...              | ...           | ...        |
 | Neural Network 4    | ...              | ...           | ...        |
 | Logistic regression | ...              | ...           | ...        |
