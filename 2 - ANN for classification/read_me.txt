@@ -9,30 +9,30 @@ The target variable is HeartDisease – yes or no. There are 17 columns with dif
 Project structure:
 
 PART - 1
-I implemented Ydata, DataPrep tools, and performed EDA to clean the data.
-I balanced all the data except for the binary variables.
-I created 2 different neural networks, changing something in each one.
-I created a logistic regression model to compare results and understand what worked better in this case: traditional machine learning or the neural networks I implemented.
-Below you can find the changes I made when implementing the neural networks:
+01 - I implemented Ydata, DataPrep tools, and performed EDA to clean the data.
+02 - I balanced all the data except for the binary variables.
 
 PART - 2
-Neural network 1: classic one
-Neural network 2: classic one + EarlyStop
-Logistic regression
-Random Forest????
+I created 2 different neural networks, changing something in each one.
+I created a logistic regression amd random forest models 
+to compare results and understand what worked better in this case: 
+traditional machine learning or the neural networks I implemented.
 
-Talking about neural networks,
-In the dataset, the target variable appears to be HeartDisease, 
-which likely indicates whether a patient has heart disease (Yes or No). 
+Below you can find the changes I made when 
+implementing the neural networks:
+03 - Neural network 1: classic one
+03 - Neural network 2: classic one + EarlyStop
+04 - Logistic regression
+04 - Random Forest
 
 Comparison of neural networks
 
 | Model               | confusion_matrix         | accuracy_score | roc_auc_score | 
 |---------------------|--------------------------|----------------|---------------|
-| Neural Network 1    |                          |                |               |
-| Neural Network 2    | ...                      | . ..           | ...           |
+| Neural Network 1    | [27694 0] x [2240 0]     | 92.52%         | 0.814         |
+| Neural Network 2    | [27754 0] x [2180 0]     | 92.72%         | 0.815         |
 | Logistic regression | [46127 118] x [3486 158] | 92.78%         | 0.627         |
-
+| Random Forest       | [36080 929] x [2649 253] | 91.04%         | 0.965         |
 
 PART - 3
 I developed a simple app based on the streamlit module
