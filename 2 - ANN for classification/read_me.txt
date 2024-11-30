@@ -8,12 +8,14 @@ The target variable is HeartDisease – yes or no. There are 17 columns with dif
 
 Project structure:
 
+PART - 1
 I implemented Ydata, DataPrep tools, and performed EDA to clean the data.
 I balanced all the data except for the binary variables.
 I created 2 different neural networks, changing something in each one.
 I created a logistic regression model to compare results and understand what worked better in this case: traditional machine learning or the neural networks I implemented.
 Below you can find the changes I made when implementing the neural networks:
 
+PART - 2
 Neural network 1: classic one
 Neural network 2: classic one + EarlyStop
 Logistic regression
@@ -32,6 +34,8 @@ Comparison of neural networks
 | Logistic regression | [46127 118] x [3486 158] | 92.78%         | 0.627         |
 
 
-You need to be in the same directory, where the app is
-
+PART - 3
+I developed a simple app based on the streamlit module
+For using this you need to be in the same directory, where the app is
+To run the app you need to write this in the terminal:
 python -m streamlit run app.py
