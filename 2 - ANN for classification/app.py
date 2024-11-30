@@ -87,7 +87,8 @@ input_data = np.array([[
     1 if Sex == "Male" else 0,                 # Convert "Male"/"Female" to 1/0
     AgeCategory,
     Race                                       # This remains numerical
-]])
+]], dtype=float)  # Ensure the array is of type float
+
 
 # Prediction button
 if st.button("Predict"):

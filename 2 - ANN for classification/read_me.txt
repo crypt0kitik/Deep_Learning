@@ -32,5 +32,6 @@ Comparison of neural networks
 | Logistic regression | [46127 118] x [3486 158] | 92.78%         | 0.627         |
 
 
-You need to be in the correct directory
+You need to be in the same directory, where the app is
+
 python -m streamlit run app.py
