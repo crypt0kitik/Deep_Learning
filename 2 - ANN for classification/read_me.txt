@@ -30,3 +30,7 @@ Comparison of neural networks
 | Neural Network 1    |                          |                |               |
 | Neural Network 2    | ...                      | . ..           | ...           |
 | Logistic regression | [46127 118] x [3486 158] | 92.78%         | 0.627         |
+
+
+You need to be in the correct directory
+python -m streamlit run app.py

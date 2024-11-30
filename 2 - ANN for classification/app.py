@@ -75,18 +75,18 @@ st.markdown("### Race")
 st.write("Race/ethnicity encoded numerically.")
 Race = st.number_input("Race (encoded)", value=float(df["Race"].mean()))
 
-# Convert inputs to numerical values
+# Convert inputs to numerical values before prediction
 input_data = np.array([[
     BMI,
-    1 if Smoking == "Yes" else 0,
-    1 if AlcoholDrinking == "Yes" else 0,
-    1 if Stroke == "Yes" else 0,
+    1 if Smoking == "Yes" else 0,              # Convert "Yes"/"No" to 1/0
+    1 if AlcoholDrinking == "Yes" else 0,      # Convert "Yes"/"No" to 1/0
+    1 if Stroke == "Yes" else 0,               # Convert "Yes"/"No" to 1/0
     PhysicalHealth,
     MentalHealth,
-    1 if DiffWalking == "Yes" else 0,
-    1 if Sex == "Male" else 0,
+    1 if DiffWalking == "Yes" else 0,          # Convert "Yes"/"No" to 1/0
+    1 if Sex == "Male" else 0,                 # Convert "Male"/"Female" to 1/0
     AgeCategory,
-    Race
+    Race                                       # This remains numerical
 ]])
 
 # Prediction button
