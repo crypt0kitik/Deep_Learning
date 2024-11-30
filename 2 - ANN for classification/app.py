@@ -1,6 +1,6 @@
 # pip install streamlit
 
-
+import pickle
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -22,17 +22,72 @@ with open("logistic_model.pkl", "rb") as file:
 st.title("Heart Disease Prediction")
 st.write("Enter your health parameters to predict the likelihood of heart disease.")
 
-# Input fields for each feature in the dataset
-BMI = st.number_input("BMI", value=float(df["BMI"].mean()))
-Smoking = st.selectbox("Smoking", [0, 1])  # Assuming 0 = No, 1 = Yes
-AlcoholDrinking = st.selectbox("Alcohol Drinking", [0, 1])  # Assuming 0 = No, 1 = Yes
-Stroke = st.selectbox("Stroke", [0, 1])  # Assuming 0 = No, 1 = Yes
+# Input fields with real words for binary values
+# Input fields with explanations
+
+# BMI
+st.markdown("### BMI")
+st.write("Body Mass Index (BMI) is a measure of body fat based on height and weight.")
+BMI = st.number_input("Enter your BMI", value=float(df["BMI"].mean()))
+
+# Smoking
+st.markdown("### Smoking")
+st.write("Have you smoked at least 100 cigarettes in your entire life?")
+Smoking = st.selectbox("Smoking Status", ["No", "Yes"])  # Map: "No" = 0, "Yes" = 1
+
+# Alcohol Drinking
+st.markdown("### Alcohol Drinking")
+st.write("Do you have more than 14 drinks per week for men or more than 7 drinks per week for women?")
+AlcoholDrinking = st.selectbox("Alcohol Consumption", ["No", "Yes"])  # Map: "No" = 0, "Yes" = 1
+
+# Stroke
+st.markdown("### Stroke")
+st.write("Have you ever been diagnosed with a stroke?")
+Stroke = st.selectbox("Stroke History", ["No", "Yes"])  # Map: "No" = 0, "Yes" = 1
+
+# Physical Health
+st.markdown("### Physical Health")
+st.write("Number of days in the past 30 days your physical health was not good.")
 PhysicalHealth = st.number_input("Physical Health (days)", value=float(df["PhysicalHealth"].mean()))
+
+# Mental Health
+st.markdown("### Mental Health")
+st.write("Number of days in the past 30 days your mental health was not good.")
 MentalHealth = st.number_input("Mental Health (days)", value=float(df["MentalHealth"].mean()))
-DiffWalking = st.selectbox("Difficulty Walking", [0, 1])  # Assuming 0 = No, 1 = Yes
-Sex = st.selectbox("Sex", [0, 1])  # Assuming 0 = Female, 1 = Male
+
+# Difficulty Walking
+st.markdown("### Difficulty Walking")
+st.write("Do you have difficulty walking or climbing stairs?")
+DiffWalking = st.selectbox("Difficulty Walking", ["No", "Yes"])  # Map: "No" = 0, "Yes" = 1
+
+# Sex
+st.markdown("### Sex")
+st.write("What is your biological sex?")
+Sex = st.selectbox("Sex", ["Female", "Male"])  # Map: "Female" = 0, "Male" = 1
+
+# Age Category
+st.markdown("### Age Category")
+st.write("Age category, where higher values represent older age groups.")
 AgeCategory = st.number_input("Age Category", value=float(df["AgeCategory"].mean()))
+
+# Race
+st.markdown("### Race")
+st.write("Race/ethnicity encoded numerically.")
 Race = st.number_input("Race (encoded)", value=float(df["Race"].mean()))
+
+# Convert inputs to numerical values
+input_data = np.array([[
+    BMI,
+    1 if Smoking == "Yes" else 0,
+    1 if AlcoholDrinking == "Yes" else 0,
+    1 if Stroke == "Yes" else 0,
+    PhysicalHealth,
+    MentalHealth,
+    1 if DiffWalking == "Yes" else 0,
+    1 if Sex == "Male" else 0,
+    AgeCategory,
+    Race
+]])
 
 # Prediction button
 if st.button("Predict"):
