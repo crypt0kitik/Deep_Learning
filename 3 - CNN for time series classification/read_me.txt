@@ -6,3 +6,21 @@ https://keras.io/examples/timeseries/timeseries_classification_from_scratch
 
 The link for the dataset: 
 https://www.kaggle.com/datasets/isabbaggin/transaction-fraudulent-financial-syntheticdata
+
+
+
+
+PART 1
+First of all, I analysed the quality of the dataset:
+01 - Evaluating dataset quality
+01 - sweetviz_report
+01 - ydata report
++ DataPrep report
+
+PART 2
+Secondly,
+
+
+PART 3
+
+PART 4
