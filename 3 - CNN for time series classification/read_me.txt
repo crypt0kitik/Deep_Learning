@@ -20,7 +20,16 @@ First of all, I analysed the quality of the dataset:
 PART 2
 Secondly,
 02 - Data Engineering
+Making all data numeric and inspection of unnecessary columns which can be dropped
 
 PART 3
+03 - CNN for time series classification.ipynb
+In this notebook:  
+Scale the values (important in CNN)  
+Split the DataFrame into timesteps  
+The train/test split  
+Develop the model with the EarlyStop
+Train the model
+Metrics evaluation  
 
 PART 4
