@@ -34,3 +34,8 @@ Metrics evaluation
 
 PART 4
 Developing a simple app for this CNN classification
+In this app you can do:
+1 - choose a category
+2 - generate a signal
+3 - display results
+4 - plot the signal
