@@ -33,3 +33,4 @@ Train the model
 Metrics evaluation  
 
 PART 4
+Developing a simple app for this CNN classification
